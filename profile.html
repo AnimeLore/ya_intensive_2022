@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/fonts/MuseoSansCyrl/stylesheet.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/Gilroy/stylesheet.css" media="screen"/>
+    <meta charset="UTF-8">
+    <title>Визитная карточка | Портфолио</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        body {
+            background: #1B2125;
+            background-size: cover;
+        }
+
+        .parent_pf {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .h_pf {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 92px;
+            line-height: 118px;
+
+            color: #FFFFFF;
+
+        }
+
+        .outwindow_pf {
+            width: 1645px;
+            height: 801px;
+
+            background: #7CC505;
+
+            box-shadow: -4px -4px 60px rgba(0, 0, 0, 0.45);
+            border-radius: 4px;
+        }
+
+        .windowtitle_pf {
+            width: 268px;
+            height: 38px;
+
+            font-family: 'MuseoSansCyrl-500', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+
+            color: #FFFFFF;
+
+        }
+
+        .innerwindow_pf {
+            margin: auto 12px 12px;
+            width: 1621px;
+            height: 751px;
+            float: bottom;
+            background: #373A3C;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .windowcross_pf {
+            background: url("/css/svg/cross.svg") no-repeat;
+            width: 28px;
+            cursor: pointer;
+            height: 28px;
+            margin-top: 5px;
+        }
+
+        .toolbar_pf {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 12px;
+        }
+
+        .tab_pf {
+            box-sizing: border-box;
+
+            width: 121px;
+            height: 121px;
+
+            background: #373A3B;
+
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        .project_pf {
+            background: url("/css/svg/Vector_list.svg") center center no-repeat;
+        }
+
+        .project_pf:not(.activetab_pf):hover {
+            background: #3D4041 url("/css/svg/Vector_list.svg") center center no-repeat;
+        }
+
+        .info_pf {
+            background: url("/css/svg/Vector_target.svg") center center no-repeat;
+        }
+
+        .info_pf:not(.activetab_pf):hover {
+            background: #3D4041 url("/css/svg/Vector_target.svg") center center no-repeat;
+        }
+
+        .activetab_pf {
+            background-color: #282B2C;
+            box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.45);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .menu_pf {
+            border-right: 4px solid #7CC505;
+            height: 100%;
+            width: 121px;
+        }
+
+        #projtab_pf {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .projectmin_pf {
+            height: 104px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .prmid_pf {
+            width: 100px;
+            height: 100%;
+            font-family: 'MuseoSansCyrl-500';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 77px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+        }
+
+        .prmtitle_pf {
+            width: 923px;
+            font-family: 'MuseoSansCyrl-500';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 48px;
+            display: flex;
+            align-items: center;
+            text-indent: 30px;
+
+            color: #FFFFFF;
+        }
+
+        #infotab_pf {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+
+        .infodata_pf {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .infoname_pf {
+            width: 656px;
+            height: 75px;
+
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        .infodesc_pf {
+            width: 690px;
+
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        .infoprogresstext_pf {
+            height: 43px;
+
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+
+        }
+
+        .infodata_r_pf {
+            margin-left: 89px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 50%;
+        }
+
+        progress {
+            width: 632px;
+            height: 44px;
+        }
+
+
+        .more_pf {
+            text-decoration: none;
+            border: 5px solid #7CC505;
+            border-radius: 25px;
+            height: 69px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.06em;
+            vertical-align: middle;
+            color: #7CC505;
+            width: 378px;
+            font-family: 'MuseoSansCyrl-700';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        .more_pf:hover {
+            background: #7CC505;
+            color: #262D33;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<div class="parent_pf">
+    <p class="h_pf">Моё портфолио</p>
+    <div class="outwindow_pf">
+        <div class="toolbar_pf">
+            <p style="text-align: left" class="windowtitle_pf">portfolio.exe</p>
+            <div class="windowcross_pf" onclick="location.pathname = '/'"></div>
+        </div>
+        <div class="innerwindow_pf">
+            <div class="menu_pf">
+                <div class="project_pf tab_pf"></div>
+                <div class="info_pf tab_pf"></div>
+            </div>
+            <div class="tabcontent_pf">
+                <div id="projtab_pf" class="tabcontentall_pf" hidden>
+
+                </div>
+                <div id="infotab_pf" class="tabcontentall_pf" hidden>
+                    <div class="infodata_pf">
+                        <img style=" margin-bottom: 16px"
+                             src="https://sun4-17.userapi.com/s/v1/ig2/Ez-4JxRHKTWqXU1elPl6SvWIatBP_1ssoYOU1Ngr-78Knrw49PDb_OaSpFl2868APu0pge9nfpRx6FFu0eNOuAqb.jpg?size=200x200&quality=96&crop=401,256,256,256&ava=1">
+                        <p class="infoname_pf">А. Д. Устинов, 17 лет</p>
+                        <p class="infodesc_pf">Веб-разработчик, старающийся улучшить свои навыки. Начал обучение верстке
+                            с 3-5 класса.
+                            <br> В 7 классе ради проверки своих способностей решил создать свой ЯП (интерпретатор +
+                            css-подобный синтаксис), успешно защитил проект в 8-9 классе на выставке Будущее Алтая,
+                            заняв 3-е место.
+                            <br> В 10 классе активно помогал знакомому с обновлением backend'а для игры Evertech
+                            Sandbox.</p>
+                    </div>
+                    <div class="infodata_r_pf">
+                        <label>
+                            <p class="infoprogresstext_pf">JavaScript</p>
+                            <progress value="50" max="100"></progress>
+                        </label>
+                        <label>
+                            <p class="infoprogresstext_pf">SQL</p>
+                            <progress value="23" max="100"></progress>
+                        </label>
+                        <label>
+                            <p class="infoprogresstext_pf">Python</p>
+                            <progress value="37" max="100"></progress>
+                        </label>
+                        <label>
+                            <p class="infoprogresstext_pf">PHP</p>
+                            <progress value="68" max="100"></progress>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

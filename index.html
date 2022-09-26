@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/fonts/MuseoSansCyrl/stylesheet.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/Gilroy/stylesheet.css" media="screen"/>
+    <meta charset="UTF-8">
+    <title>Визитная карточка</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        body {
+            background: #1B2125 url("/css/svg/Main block.svg") no-repeat fixed center center;
+            background-size: cover;
+        }
+
+        .parent_profdev {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .profdev {
+            width: 1437px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .h_profdev {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 128px;
+            line-height: 155px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+
+        }
+
+        .desc_profdev {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 46px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        .button_profdev {
+            text-decoration: none;
+            border: 5px solid #7CC505;
+            border-radius: 25px;
+            height: 69px;
+            width: 370px;
+            font-family: 'MuseoSansCyrl-700';
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.06em;
+            vertical-align: middle;
+            color: #7CC505;
+        }
+
+        .button_profdev:hover {
+            background: #7CC505;
+            color: #262D33;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="parent_profdev">
+    <div class="profdev">
+        <p class="h_profdev">Персональный веб-dev</p>
+        <p class="desc_profdev">Разработка сайтов и приложений на заказ
+            <br>по скромным ценам </p>
+        <div style="display: flex; flex-direction: row; align-items: center; margin-top: 32px;">
+            <a href="profile.html" class="button_profdev" style="margin-right: 20px"><p
+                        style="text-align: center; width: 100%">
+                    Портфолио</p></a>
+            <a href="order.html" class="button_profdev" style="margin-left: 20px"><p
+                        style="text-align: center; width: 100%">
+                    Заказать</p></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

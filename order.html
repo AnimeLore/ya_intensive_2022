@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/fonts/MuseoSansCyrl/stylesheet.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts/Gilroy/stylesheet.css" media="screen"/>
+    <meta charset="UTF-8">
+    <title>Визитная карточка | Заказать</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        body {
+            background: #1B2125;
+            background-size: cover;
+        }
+
+        .parent_order {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .h_order {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 92px;
+            line-height: 118px;
+
+            color: #FFFFFF;
+
+        }
+
+        .outwindow_order {
+            width: 1032px;
+            height: 801px;
+
+            background: #7CC505;
+
+            box-shadow: -4px -4px 60px rgba(0, 0, 0, 0.45);
+            border-radius: 4px;
+        }
+
+        .windowtitle_order {
+            width: 268px;
+            height: 38px;
+
+            font-family: 'MuseoSansCyrl-500', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+
+            color: #FFFFFF;
+
+        }
+
+        .innerwindow_order {
+            margin: auto 12px 12px;
+            width: 1009px;
+            height: 751px;
+            float: bottom;
+            background: #373A3C;
+            border-radius: 4px;
+        }
+
+        .windowcross_order {
+            background: url("/css/svg/cross.svg") no-repeat;
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            margin-top: 5px;
+        }
+
+        .toolbar_order {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 12px;
+        }
+
+        .formname_order {
+            width: 798px;
+            height: 28px;
+            margin-left: 105px;
+            margin-bottom: 6px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+        }
+
+        .formnameinput_order {
+            width: 798px;
+            height: 42px;
+
+            background: #4F4F4F;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #4F4F4F;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 10px;
+            color: white;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .formnamegroup_order {
+            padding-top: 78px;
+        }
+
+        .formmail_order {
+            width: 798px;
+            height: 28px;
+            margin-left: 105px;
+            margin-bottom: 6px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+        }
+
+        .formmailinput_order {
+            width: 798px;
+            height: 42px;
+
+            background: #4F4F4F;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #4F4F4F;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 10px;
+            color: white;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .formmailgroup_order {
+            padding-top: 31px;
+        }
+
+        .formdesc_order {
+            width: 798px;
+            height: 28px;
+            margin-left: 105px;
+            margin-bottom: 6px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+        }
+
+        .formdescinput_order {
+            width: 798px;
+            height: 226px;
+            word-break: break-word;
+            background: #4F4F4F;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #4F4F4F;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 10px;
+            color: white;
+            resize: none;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .formdescgroup_order {
+            padding-top: 31px;
+        }
+
+        .submit_order {
+            text-decoration: none;
+            border: 5px solid #7CC505;
+            border-radius: 25px;
+            height: 69px;
+            width: 370px;
+            font-family: 'MuseoSansCyrl-700';
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.06em;
+            vertical-align: middle;
+            color: #7CC505;
+        }
+
+        .submit_order:hover {
+            background: #7CC505;
+            color: #262D33;
+        }
+    </style>
+</head>
+
+<body>
+<div class="parent_order">
+    <p class="h_order">Заказать</p>
+    <div class="outwindow_order">
+        <div class="toolbar_order">
+            <p style="text-align: left" class="windowtitle_order">new_order.exe</p>
+            <div class="windowcross_order" onclick="location.pathname = '/'"></div>
+        </div>
+        <div class="innerwindow_order">
+            <div class="formnamegroup_order">
+                <label>
+                    <p class="formname_order">Ваше имя</p>
+                    <input type="text" name="name" class="formnameinput_order"/>
+                </label>
+            </div>
+            <div class="formmailgroup_order">
+                <label>
+                    <p class="formmail_order">Ваш адрес электронной почты</p>
+                    <input type="text" name="name" class="formmailinput_order"/>
+                </label>
+            </div>
+            <div class="formdescgroup_order">
+                <label>
+                    <p class="formdesc_order">Краткое описание заказа</p>
+                    <textarea class="formdescinput_order"></textarea>
+                </label>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 31px;">
+                <a href="javascript:" class="submit_order" style="margin-left: 20px"><p
+                            style="text-align: center; width: 100%">
+                        Заказать</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
